@@ -2,7 +2,15 @@
 $c-primary: #3c3c3c;
 $linkColor: #4779c2; //blue
 
+$c-border-dark: #9199A1;
+
 //breakpoints
 $view-mobile: 325px;
 $view-tablet: 768px;
 $view-desktop: 980px;
+
+
+body {
+  color: $c-primary;
+  font-family: 'Open Sans', arial, sans-serif;
+}

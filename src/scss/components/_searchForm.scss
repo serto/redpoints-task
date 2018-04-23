@@ -1,0 +1,29 @@
+
+.searchForm {
+
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 12px 0;
+  width: 100%;
+
+  input {
+    border: 1px solid $c-border-dark;
+    color: $c-primary;
+    font-size: 16px;
+    height: 40px;
+    padding: 0 1%;
+    width: 73%;
+  }
+
+  button {
+    background-color: $linkColor;
+    border: 0;
+    color: #FFF;
+    font-weight: 600;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 2%;
+    width: 24%;
+  }
+    
+}
