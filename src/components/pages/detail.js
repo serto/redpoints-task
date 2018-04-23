@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import { Header } from '../common/Header'
+
 export default class Detail extends Component {
 
   constructor(props){
@@ -11,8 +13,10 @@ export default class Detail extends Component {
   render () {
 
     return (
-      <h1>DETAIL PAGE</h1>
+      <div className='wrapper'>
+        <Header>RedPoints MovieSearch</Header>
+      </div>
     );
   }
-  
+
 }
