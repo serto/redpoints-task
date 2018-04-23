@@ -1,0 +1,25 @@
+
+.movieElement {
+  flex: 1 1 42%;
+  padding: 0 2px;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $view-tablet) {
+    flex: 1 1 30%;
+  }
+
+  @media screen and (min-width: $view-desktop) {
+    flex: 1 1 23%;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  h3 {
+    color: $linkColor;
+    text-align: center;
+  }
+
+}

@@ -18,6 +18,16 @@ export class SearchForm extends Component {
 
   }
 
+  componentWillMount(){
+    const isSearch = false
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
+      .then(res => res.json())
+      .then(response => {
+        const { results } = response
+        this.props.onResults(results, isSearch)
+      })
+  }
+
   handleChange (e) {
     this.setState({ inputMovie: e.target.value })
   }
@@ -26,11 +36,13 @@ export class SearchForm extends Component {
     e.preventDefault()
 
     const { inputMovie } = this.state
+    const isSearch = true
 
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${inputMovie}`)
       .then(res => res.json())
       .then(response => {
-        console.log(response)
+        const { results } = response
+        this.props.onResults(results, isSearch)
       })
   }  
 
