@@ -4,6 +4,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
 
   &-image {
     flex: 1 1 25%;
@@ -18,11 +20,11 @@
     flex: 1 1 75%;
     
     p {
-      padding: 0 0 24px 8px;
+      padding: 0 0 24px 24px;
     }
 
     a {
-      padding: 0 0 24px 8px;
+      padding: 0 0 24px 24px;
     }
   }
 }

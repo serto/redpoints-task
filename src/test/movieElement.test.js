@@ -2,8 +2,15 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() });
+
+import { shallow, mount, render } from 'enzyme';
+
 import { MovieElement } from '../components/common/MovieElement';
-import { Link } from 'react-router-dom'
+
 
 const testProps = {
   title: 'Coco',
@@ -13,13 +20,16 @@ const testProps = {
 
 test('Movie Element have image and title', () => {
 
-  const component = renderer.create(
-    <MovieElement {...testProps} />
-  );
+  const wrapper = shallow(<MovieElement {...testProps}/>)
 
-  const image = component.find('img');
-  expect(image.length).toEqual(1);
+  expect(
+    shallow(<MovieElement  {...testProps}/>)
+    .find('img').exists())
+  .toEqual(true);
 
-  const title = component.find('h3');
-  expect(title.length).toEqual(1);
+  expect(
+    shallow(<MovieElement  {...testProps}/>)
+    .find('h3').exists())
+  .toEqual(true);
+
 });
