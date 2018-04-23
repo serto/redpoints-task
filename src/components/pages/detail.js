@@ -12,9 +12,12 @@ export default class Detail extends Component {
 
   render () {
 
+    const { id } = this.props.match.params
+
     return (
       <div className='wrapper'>
         <Header>RedPoints MovieSearch</Header>
+        <p>ID of the movie {id}</p>
       </div>
     );
   }

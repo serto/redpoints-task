@@ -15,7 +15,7 @@ class RedPointsTask extends Component {
         <BrowserRouter>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/detail' component={Detail} />
+          <Route path='/detail/:id' component={Detail} />
         </Switch>
         </BrowserRouter>
     );

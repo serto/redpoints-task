@@ -1,10 +1,11 @@
 
 $c-primary: #3c3c3c;
 $linkColor: #4779c2; //blue
-$linkColor-hover: darken($linkColor, 5%);
+$linkColor-hover: darken($linkColor, 8%);
 
 $c-border-dark: #9199a1;
 $c-error:  #d1243d;
+$c-hoverCard: #d7dbdf;
 
 //breakpoints
 $view-mobile: 325px;
