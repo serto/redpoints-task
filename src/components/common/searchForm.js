@@ -26,6 +26,9 @@ export class SearchForm extends Component {
         const { results } = response
         this.props.onResults(results, isSearch)
       })
+      .catch(function() {
+        console.log("error in search");
+      })
   }
 
   handleChange (e) {
@@ -43,6 +46,9 @@ export class SearchForm extends Component {
       .then(response => {
         const { results } = response
         this.props.onResults(results, isSearch)
+      })
+      .catch(function() {
+        console.log("error in search");
       })
   }  
 
