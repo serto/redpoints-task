@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import Home from './components/pages/Home'
+import Detail from './components/pages/Detail'
+
 import './scss/main.scss';
 
-class AppBoilerplate extends Component {
+class RedPointsTask extends Component {
   render() {
   
     return(
-      <p>NEW BOILERPLATE</p>
+        <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/detail' component={Detail} />
+        </Switch>
+        </BrowserRouter>
     );
   }
 }
 
 ReactDOM.render(
-  <AppBoilerplate />,
-	document.getElementById('app')
+  <RedPointsTask />,
+    document.getElementById('app')
 );
