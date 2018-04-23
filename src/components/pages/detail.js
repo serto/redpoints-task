@@ -39,6 +39,11 @@ export default class Detail extends Component {
       homepage
       } = this.state.movieInfo
 
+    const url_image = (poster_path) ? 
+                    `https://image.tmdb.org/t/p/w500${poster_path}`
+                    :
+                    '/img/not-image.jpg'  
+
     return (
       <div className='wrapper'>
         <Header>RedPoints MovieSearch</Header>
@@ -47,12 +52,12 @@ export default class Detail extends Component {
         <div className='detailMovie'>
           
           <div className='detailMovie-image'>
-            <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} />
+            <img src={url_image} alt={title} title={title} />
           </div>
 
           <div className='detailMovie-content'>
             <p><strong>Argument:</strong> {overview}</p>
-            <p><strong>Valoration :</strong> {vote_average}</p>
+            <p><strong>Rate :</strong> {vote_average}</p>
             { homepage && <a href={homepage}>Official Site</a> }
           </div>
 

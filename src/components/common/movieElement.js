@@ -14,11 +14,15 @@ export class MovieElement extends Component {
 
     const { title, imagesrc, id} = this.props
     
+    const url_image = (imagesrc) ? 
+                      `https://image.tmdb.org/t/p/w500${imagesrc}`
+                      :
+                      '/img/not-image.jpg'
     return (
 
       <div className='movieElement'>
         <Link to={`detail/${id}`}>
-          <img src={`https://image.tmdb.org/t/p/w500${imagesrc}`} />
+          <img src={url_image} alt={title} title={title} />
           <h3>{title}</h3>
         </Link>
       </div>
