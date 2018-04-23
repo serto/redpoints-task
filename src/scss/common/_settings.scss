@@ -17,3 +17,15 @@ body {
   color: $c-primary;
   font-family: 'Open Sans', arial, sans-serif;
 }
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $linkColor-hover;
+  }
+  &:visited {
+    color: $linkColor;
+  }
+}
