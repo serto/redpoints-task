@@ -1,0 +1,30 @@
+
+.suggestsList {
+  background-color: #fff;
+  border: 1px solid $c-border-dark;
+  border-top: 0;
+  left: 0;
+  max-height: 375px;
+  overflow-y: auto;
+  position: absolute;
+  top: 42px;
+  width: 75%;
+  z-index: 10;
+
+
+  @media screen and (min-width: $view-tablet) {
+    max-height: 450px;
+  }
+
+  li {
+    border-top: 1px solid $c-border-dark;
+    cursor: pointer;
+    list-style: none;
+    padding: 8px 4px;
+    text-align: center;
+
+    &:hover {
+      background-color: $c-hoverCard;
+    }
+  }
+}

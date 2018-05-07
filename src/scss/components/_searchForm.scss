@@ -6,6 +6,10 @@
   padding: 12px 0;
   width: 100%;
 
+  form {
+    position: relative;
+  }
+
   input {
     border: 1px solid $c-border-dark;
     color: $c-primary;
@@ -18,12 +22,12 @@
   button {
     background-color: $linkColor;
     border: 0;
-    color: #FFF;
+    color: #fff;
     font-weight: 600;
     height: 42px;
     line-height: 42px;
     padding: 0 2%;
     width: 24%;
   }
-    
+
 }
